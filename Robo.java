@@ -1,36 +1,82 @@
-public class Robo {
-    public int codigo;
-    public String nome;
-    public int ataque;
-    public int defesa;
-    public int energia;
-    public int vitoria;
-    public int derrota;
-    public int pontos;
-    public int roboCodigo;
+ 
+public abstract class Robo {
+    //Encapsulamento
+    private  int codigo;
+    private  String nome;
+    private  int ataque;
+    private  int defesa;
+    private  int energia;
+    private  int win;
+    private  int lose;
+    private  int ponto;
    
  
-    Robo(int codigo, String nome, int ataque, int defesa, int energia, int vitoria, int derrota, int pontos){
+    public Robo(int codigo, String nome, int ataque, int defesa, int energia, int win, int lose, int ponto){
        
         this.codigo = codigo;
         this.nome = nome;
         this.ataque = ataque;
         this.defesa = defesa;
-        this.energia = energia;
-        this.vitoria = vitoria;
-        this.derrota = derrota;
-        this.pontos = pontos;
     }
    
 public void Consultar() {
  
-        System.out.println("Código: " + codigo);
+        System.out.println("Tipo: " + this.getClass().getSimpleName());
+        System.out.println("Código: " + (codigo));
         System.out.println("Nome: " + nome);
         System.out.println("Ataque: " + ataque);
         System.out.println("Defesa: " + defesa);
         System.out.println("Energia " + energia);
-        System.out.println("Vitórias: " + vitoria);
-        System.out.println("Derrotas: " + derrota);
-        System.out.println("Pontos: " + pontos);
+        System.out.println("Ponto " + ponto);
+       
     }
+//Métodos para utilizar as variaveis privadas
+public int codigo(){
+    return codigo;
 }
+ 
+public String nome(){
+    return nome;
+}
+public int ataque(){
+    return ataque;
+}
+ 
+public int defesa(){
+    return defesa;
+}
+public int energia(){
+    return energia;
+}
+ 
+public int win(){
+    return win;
+}
+ 
+public int lose(){
+    return lose;
+}
+ 
+public int ponto(){
+    return ponto;
+}
+ 
+//Set para as variaveis em modificação
+public void setEnergia(int energia) {
+    this.energia = energia;
+}
+ 
+public void setWin(int win) {
+    this.win = win;
+}
+ 
+public void setLose(int lose) {
+    this.lose = lose;
+}
+ 
+public void setPonto(int ponto) {
+    this.ponto = ponto;
+}
+ 
+}
+ 
