@@ -17,6 +17,10 @@ public abstract class Robo {
         this.nome = nome;
         this.ataque = ataque;
         this.defesa = defesa;
+        this.energia = energia;
+        this.win = win;
+        this.lose = lose;
+        this.ponto = ponto;
     }
    
 public void Consultar() {
